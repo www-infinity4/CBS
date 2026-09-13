@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#07070a">
+  <title>CBS · Infinity TV Network</title>
+  <meta name="description" content="A synchronized CBS channel centered on 1990s-era movies, classic CBS television from every decade, daytime soaps, newsmagazines and family programming.">
+  <link rel="canonical" href="https://www-infinity4.github.io/CBS/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CBS · Infinity TV Network">
+  <meta property="og:title" content="CBS — 1990s Movies, Classic TV & Daytime Soaps">
+  <meta property="og:description" content="1990s movie nights, classic CBS series, vintage soap operas and memorable network specials on one synchronized channel.">
+  <meta property="og:url" content="https://www-infinity4.github.io/CBS/">
+  <meta property="og:image" content="https://i.ytimg.com/vi/B67w4LqvCGE/maxresdefault.jpg">
+  <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/92fLApYaCGI/maxresdefault.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="720">
+  <meta property="og:image:alt" content="Charles Osgood hosting a classic CBS Sunday Morning broadcast">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CBS — Black Entertainment, Sports, Music & Culture">
+  <meta name="twitter:description" content="Classic CBS television, daytime soaps and 1990s movie nights in a synchronized live channel.">
+  <meta name="twitter:image" content="https://i.ytimg.com/vi/92fLApYaCGI/maxresdefault.jpg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307070a'/%3E%3Cpath d='M32 9l6.2 12.7 14 2-10.1 9.8 2.4 13.9L32 40.8 19.5 47.4l2.4-13.9-10.1-9.8 14-2z' fill='%23f2bd3c'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=20260913-cbs1">\n  <link rel="stylesheet" href="mobile-fix.css?v=20260913">
+  <script src="https://www-infinity4.github.io/Control-Phi/control-phi.js" onerror="this.onerror=null;this.src='https://www-infinity4.github.io/News-Phi/control-phi.js'"></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="#top" aria-label="CBS home"><span class="brand-mark" aria-hidden="true">◉</span><span>CBS</span></a>
+    <details class="channel-menu"><summary aria-label="Open channel remote"><span aria-hidden="true">☰</span><span class="menu-label">Channels</span></summary><nav aria-label="Switch channels"></nav></details>
+    <div class="on-air"><span></span> ON AIR</div>
+    <time id="stationClock">--:-- local</time>
+  </header>
+
+  <main id="top">
+    <section class="theater" aria-labelledby="nowTitle">
+      <div class="marquee">
+        <div><p id="modeLabel">LIVE CBS</p><h1 id="nowTitle">Loading today’s program…</h1></div>
+        <div class="program-time" id="programTime">Please wait</div>
+      </div>
+      <div class="screen-shell">
+        <div id="player" class="player" aria-label="CBS channel player"></div>
+        <div id="stationCard" class="station-card" hidden><p id="stationCardLabel">CBS</p><strong id="stationCardTitle">Station break</strong><span id="stationCardCountdown"></span></div>
+        <button id="enterButton" class="enter-button" type="button"><span>Enter CBS</span><small>Join the program at the same station time as every live viewer</small></button>
+      </div>
+      <div class="controls" aria-label="Playback controls">
+        <button id="startOverButton" type="button">Start over</button>
+        <button id="rewindButton" type="button">Rewind 30 sec</button>
+        <button id="liveButton" class="live-button" type="button"><span></span> Join live</button>
+        <button id="shareButton" class="share-button" type="button">Share · +1/10 ⭐</button>
+        <button id="walletButton" class="infinity-wallet-button" type="button">Connect Wallet</button>
+        <span id="shareStatus" class="share-status" role="status" aria-live="polite"></span>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-meta"><span id="positionLabel">Station clock</span><span id="remainingLabel">-- remaining</span></div>
+        <div class="progress-track"><div id="progressBar"></div></div>
+      </div>
+    </section>
+
+    <section class="next-up" aria-labelledby="nextHeading">
+      <div class="section-heading"><div><p>CLASSIC SERIES · DAYTIME SOAPS · 1990s MOVIES</p><h2 id="nextHeading">Next on CBS</h2></div></div>
+      <div id="nextCards" class="next-grid"></div>
+    </section>
+
+    <section class="guide" aria-labelledby="guideHeading">
+      <div class="section-heading guide-heading"><div><p>NEW LINEUP AT 12:00 AM IN YOUR LOCAL TIME</p><h2 id="guideHeading">CBS TV guide</h2></div><span id="guideDate"></span></div>
+      <div id="guideRows" class="guide-rows"></div>
+    </section>
+  </main>
+
+  <section class="premium" aria-labelledby="premiumHeading">
+    <div class="premium-heading"><p>CBS ARCHIVE WISHLIST · FULL PROGRAMS ONLY</p><h2 id="premiumHeading">Wanted for the channel</h2></div>
+    <div id="premiumTargets" class="premium-grid"></div>
+  </section>
+
+  <section class="phi-web-search" aria-labelledby="phiWebSearchHeading">
+    <div><p>INFINITY PHI</p><h2 id="phiWebSearchHeading">Search the web</h2></div>
+    <form action="https://www-infinity4.github.io/C13b0/phi" method="get"><input name="q" type="search" placeholder="Search CBS shows, soaps, movies and network history" aria-label="Search with Infinity Phi" required><input name="run" type="hidden" value="1"><button type="submit">Search φ</button></form>
+  </section>
+
+  <section class="channel-directory" aria-label="Other live channels"></section>
+
+  <footer><span>CBS</span><p>A curated CBS-era channel experience. Video playback remains with the original source channels.</p></footer>
+
+  <script src="data/catalog.js?v=20260913-cbs1"></script>
+  <script src="https://www-infinity4.github.io/TNT/channels.js?v=20260913-priority"></script>
+  <script src="https://www-infinity4.github.io/Mint-For-Infinity/unified-wallet.js?v=20260831-game-rewards1"></script>
+  <script src="app.js?v=20260913-cbs1"></script>
+  <script src="wallet-bridge.js?v=20260913-cbs1"></script>
+</body>
+</html>
