@@ -1,0 +1,9 @@
+/* Keep the channel remote reachable on narrow Android screens. */
+@media (max-width: 760px) {
+  .masthead { width: 100%; max-width: 100%; padding-inline: 10px; overflow: visible; }
+  .brand { min-width: 0; flex: 0 1 auto; }
+  .channel-menu { flex: 0 0 auto; margin-left: auto; }
+  .channel-menu > summary { width: 44px; padding: 0; justify-content: center; }
+  .channel-menu > nav { position: fixed; top: 70px; left: 8px; right: 8px; width: auto; max-width: none; }
+  .on-air { display: none; }
+}
